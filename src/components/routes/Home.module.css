@@ -1,0 +1,22 @@
+.home {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, 50vw);
+  padding: 10px;
+}
+
+.container--main {
+  justify-content: center;
+  align-items: center;
+}
+
+.container--img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 50%;
+  box-sizing: border-box;
+}
