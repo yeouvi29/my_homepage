@@ -1,8 +1,7 @@
 .detail-lists {
   width: 100%;
-  height: 10rem;
-  background-color: lightblue;
-  margin-top: 5rem;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   list-style: none;

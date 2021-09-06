@@ -49,3 +49,10 @@ a {
 .image-box:hover .external {
   font-size: 5rem;
 }
+
+.container--detail {
+  width: 100%;
+  height: 10rem;
+  background-color: lightblue;
+  margin-top: 5rem;
+}

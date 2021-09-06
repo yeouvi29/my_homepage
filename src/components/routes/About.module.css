@@ -15,9 +15,10 @@
   align-items: center;
 }
 
-.container-wrapper {
+.container--wrapper {
   width: 50rem;
   height: 50rem;
+  cursor: pointer;
   position: relative;
 }
 
@@ -33,7 +34,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-left: 1rem;
+  padding-left: 3rem;
   box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 15%);
   overflow: hidden;
   transition: all .8s ease;
@@ -44,17 +45,65 @@
   box-sizing: border-box;
 }
 
+.front {
+  z-index: 1;
+}
+
 .back {
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  background-color: #38A3A5;
+  transform: translateY(-50%);
+}
+
+.container--wrapper:hover .back {
+  left: 98%;
+
+}
+
+/* .back {
   background-color: #38A3A5;
   transform: rotateY(180deg);
 }
 
-.container-wrapper:hover .front {
+.container--wrapper:hover .front {
   transform: rotateY(-180deg);
 }
 
-.container-wrapper:hover .back {
+.container--wrapper:hover .back {
   transform: rotateY(0);
+} */
+
+.container--image {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 3rem;
+}
+
+.together {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: #80ED99;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3rem;
+  justify-content: space-between;
+  padding-right: 3rem;
+}
+
+.image {
+  width: 100%;
+}
+
+.color-letter {
+  font-size: 5rem;
+}
+
+.build {
+  font-size: 3rem;
 }
 
 h3 span {
