@@ -1,20 +1,89 @@
 .header {
-  width: 100%;
-  height: 7rem;
+  width: 100vw;
+  height: 10rem;
   align-items: center;
   background-color: #fff;
-  border-bottom: 1px solid black;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
   position: fixed;
-  padding: 0 30px;
+  padding: 0 7rem;
   top: 0;
   left: 0;
   z-index: 100;
 }
 
+.nav {
+  background-color: transparent;
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  top: 1rem;
+  right: 7rem;
+  border-bottom-left-radius: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  justify-self: flex-end;
+  overflow: hidden;
+}
+
+.container--menu {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 100%;
+  z-index: 10;
+}
+
+.container--menu:hover .menu-bar-top {
+  top: 40%;
+  transform: rotate(45deg);
+}
+
+.container--menu:hover .menu-bar-middle {
+  display: none;
+}
+
+.container--menu:hover .menu-bar-bottom {
+  top: 40%;
+  transform: rotate(135deg);
+}
+
+.container--menu:hover~.menu-lists,
+.menu-lists:hover {
+  transform: rotate(0);
+}
+
+.menu-bar {
+  width: 2.5rem;
+  height: .3rem;
+  position: absolute;
+  right: 30%;
+  background-color: #000;
+}
+
+.menu-bar-top {
+  top: calc(40% + 1rem);
+  transition: all .1s ease-in;
+}
+
+.menu-bar-middle {
+  top: 40%;
+  transition: all .1s ease-in;
+}
+
+.menu-bar-bottom {
+  top: calc(40% - 1rem);
+  transition: all .1s ease-in;
+}
+
 .logo {
+  position: absolute;
+  left: 9rem;
   cursor: pointer;
   font-size: 3rem;
 }
@@ -23,26 +92,47 @@
   text-decoration: none;
 }
 
-.nav {
-  width: 40%;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  justify-self: flex-end;
+.menu-lists {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 192, 203, 0.8);
+  padding-bottom: 5rem;
+  transform-origin: top right;
+  transform: rotate(90deg);
+  transition: all .2s ease-in;
+  padding-left: 1rem;
+  position: relative;
+  border: 2px dashed transparent;
+  z-index: 0;
 }
 
 .link {
   width: 10rem;
+  height: 5rem;
   margin-top: 20px;
   color: #000;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.7rem;
   text-decoration: none;
   padding: .8rem 1rem;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 10px;
+  right: 1rem;
+}
+
+.link:first-child {
+  bottom: 10rem
+}
+
+.link:last-child {
+  bottom: 4rem
 }
 
 .link:hover {
-  border: 2px dashed #000;
-  border-radius: 10px;
-
+  /* border: 2px dashed #000; */
+  color: #fff;
 }

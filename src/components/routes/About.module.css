@@ -40,6 +40,29 @@
   transition: all .8s ease;
 }
 
+.my-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@keyframes moving {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateX(1rem);
+  }
+}
+
+.my-name span i {
+  margin-right: 3rem;
+  font-size: 3rem;
+  color: #C8C6C6;
+  animation: moving .3s ease-in-out infinite alternate none;
+}
+
 .image {
   width: 50%;
   box-sizing: border-box;

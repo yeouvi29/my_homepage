@@ -41,7 +41,12 @@ const About = () => {
     <div className={mainClass}>
       <div className={classes["container--wrapper"]}>
         <div className={`${classes["container--text"]} ${classes.front}`}>
-          <p>Hi, my name is</p>
+          <p className={classes["my-name"]}>
+            Hi, my name is
+            <span>
+              <i class="fas fa-chevron-right"></i>
+            </span>
+          </p>
           <h1>Emily Kang,</h1>
           <h1>a web developer</h1>
           <h3>
@@ -51,7 +56,7 @@ const About = () => {
         <div className={`${classes["container--text"]} ${classes.back}`}>
           <p>{colorfulElements}</p>
           <p className={classes.build}>
-            who loves <strong>building apps</strong>
+            who loves <strong>building web</strong>
           </p>
           <p className={classes.together}>
             and cats!

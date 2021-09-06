@@ -21,14 +21,15 @@ const Footer = (props) => {
   };
   return (
     <footer className={classes.footer}>
-      <ul onClick={handleClick}>
-        <li className="list">
+      <div className={classes["line-long"]}></div>
+      <ul classes={classes["contact-lists"]} onClick={handleClick}>
+        <li className={classes.list}>
           <i className="icon fab fa-github" id="github"></i>
         </li>
-        <li className="list">
+        <li className={classes.list}>
           <i className="icon fab fa-linkedin" id="linkedin"></i>
         </li>
-        <li className="list linkedin">
+        <li className={classes.list}>
           <i className="icon fab fa-twitter" id="twitter"></i>
         </li>
         <li className="icon list" id="email">
@@ -37,6 +38,7 @@ const Footer = (props) => {
           </a>
         </li>
       </ul>
+      <div className={classes["line-long"]}></div>
     </footer>
   );
 };

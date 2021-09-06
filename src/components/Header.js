@@ -11,15 +11,29 @@ const Header = (props) => {
         </Link>
       </h1>
       <nav className={classes.nav}>
-        <Link to="/about" className={classes.link}>
-          About
-        </Link>
-        <Link to="/project" className={classes.link}>
-          Project
-        </Link>
-        <Link to="/contact" className={classes.link}>
+        <div className={classes["container--menu"]}>
+          <div
+            className={`${classes["menu-bar"]} ${classes["menu-bar-top"]}`}
+          ></div>
+          <div
+            className={`${classes["menu-bar"]} ${classes["menu-bar-middle"]}`}
+          ></div>
+          <div
+            className={`${classes["menu-bar"]} ${classes["menu-bar-bottom"]}`}
+          ></div>
+        </div>
+        <div className={classes["menu-lists"]}>
+          <Link to="/about" className={classes.link}>
+            About
+          </Link>
+          <Link to="/project" className={classes.link}>
+            Project
+          </Link>
+        </div>
+
+        {/* <Link to="/contact" className={classes.link}>
           Contact
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );
