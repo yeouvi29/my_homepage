@@ -2,23 +2,39 @@ import classes from "./Footer.module.css";
 
 const Footer = (props) => {
   const handleClick = (e) => {
-    console.log(e.target);
-    if (e.target.closest(".list")) window.open("https://github.com/yeouvi29");
+    const id = e.target.closest(".icon").id;
+    if (id) {
+      switch (id) {
+        case "github":
+          window.open("https://github.com/yeouvi29");
+          break;
+        case "linkedin":
+          window.open("https://www.linkedin.com/in/emily-kang-324798110/");
+          break;
+        case "twitter":
+          window.open("https://www.twitter.com/yeouvi29/");
+          break;
+        default:
+          console.log("");
+      }
+    }
   };
   return (
     <footer className={classes.footer}>
       <ul onClick={handleClick}>
-        <li className="list github">
-          <i className="fab fa-github github"></i>
+        <li className="list">
+          <i className="icon fab fa-github" id="github"></i>
         </li>
-        <li className="list github">
-          <i className="fab fa-linkedin linkedin"></i>
+        <li className="list">
+          <i className="icon fab fa-linkedin" id="linkedin"></i>
         </li>
         <li className="list linkedin">
-          <i className="fab fa-twitter twitter"></i>
+          <i className="icon fab fa-twitter" id="twitter"></i>
         </li>
-        <li className="list email">
-          <i className="fas fa-envelope email"></i>
+        <li className="icon list" id="email">
+          <a href="mailto: yeouvi29@gmail.com">
+            <i className="fas fa-envelope email"></i>
+          </a>
         </li>
       </ul>
     </footer>

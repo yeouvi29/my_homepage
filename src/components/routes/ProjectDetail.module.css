@@ -1,0 +1,16 @@
+.detail-lists {
+  width: 100%;
+  height: 10rem;
+  background-color: lightblue;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.detail-list {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  margin-top: .5rem;
+  margin-left: 1rem;
+}

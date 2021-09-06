@@ -1,6 +1,5 @@
 import { Switch, Route } from "react-router-dom";
 
-import Home from "./routes/Home";
 import About from "./routes/About";
 import Project from "./routes/Project";
 import Contact from "./routes/Contact";
@@ -11,8 +10,8 @@ const Main = (props) => {
   return (
     <div className={classes.main}>
       <Switch>
-        <Route exact path="/">
-          <Home />
+        <Route path="/about">
+          <About />
         </Route>
         <Route exact path="/about">
           <About />

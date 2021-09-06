@@ -2,19 +2,22 @@
   background-color: cadetblue;
   width: 10rem;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  display: block;
+
   position: fixed;
   left: 0;
   bottom: 0;
-  padding-bottom: 5rem;
-  z-index: 10;
+  padding-bottom: 10rem;
 }
 
 .footer ul {
   list-style: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
 }
 
 ul li {
@@ -22,8 +25,8 @@ ul li {
 }
 
 ul li i {
-  font-size: 2rem;
-  margin-top: 1rem;
+  font-size: 3rem;
+  margin-top: 1.5rem;
 }
 
 ul li i:hover {

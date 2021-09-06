@@ -1,0 +1,51 @@
+.project-lists {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+}
+
+li span {
+  position: absolute;
+  top: -2.7rem;
+  text-align: center;
+}
+
+a {
+  color: #000;
+}
+
+.image-box {
+  width: 30rem;
+  height: 20rem;
+  font-size: 2rem;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  position: relative;
+  transition: all .3s cubic-bezier(.58, .01, .37, 1);
+
+}
+
+.image-box:hover {
+  filter: grayscale(0);
+  /* border: 2px solid #000; */
+}
+
+.external {
+  margin-top: 0;
+  font-size: 0;
+  color: gray;
+  transition: all .2s cubic-bezier(.58, .01, .37, 1);
+}
+
+.image-box:hover .external {
+  font-size: 5rem;
+}
