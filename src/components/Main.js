@@ -2,7 +2,6 @@ import { Switch, Route } from "react-router-dom";
 
 import About from "./routes/About";
 import Project from "./routes/Project";
-import Contact from "./routes/Contact";
 
 import classes from "./Main.module.css";
 
