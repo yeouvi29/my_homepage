@@ -21,19 +21,19 @@ const Project = () => {
   const [name, setName] = useState("");
   const [languages, setLanguaes] = useState("");
   const [prjDetail, setprjDetail] = useState("");
+  const [isEntered, setIsEntered] = useState(false);
   const handleClick = (e) => {
     const el = e.target.id;
     if (!el) return;
-    if (el) {
-      info.forEach((prj) => {
-        if (prj.id === el) window.open(prj.website);
-      });
-    }
+    info.forEach((prj) => {
+      if (prj.id === el) window.open(prj.website);
+    });
   };
 
   const handleMouseEnter = (e) => {
     const el = e.target.id;
     if (!el) return;
+    setIsEntered(true);
     info.forEach((prj) => {
       if (prj.id === el) {
         setName(prj.name);
@@ -64,14 +64,21 @@ const Project = () => {
       </li>
     );
   });
-
+  console.log(isEntered);
   return (
     <Card styles={classes["card-style"]}>
-      <ul className={classes["project-lists"]} onClick={handleClick}>
+      <ul className={classes["project-lists"]} onMouseEnter={handleMouseEnter}>
         {imageEls}
       </ul>
       <div className={classes["container--detail"]}>
-        <ProjectDetail name={name} languages={languages} detail={prjDetail} />
+        {name && (
+          <ProjectDetail
+            isEntered={isEntered}
+            name={name}
+            languages={languages}
+            detail={prjDetail}
+          />
+        )}
       </div>
     </Card>
   );
