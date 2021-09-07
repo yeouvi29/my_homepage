@@ -2,11 +2,13 @@
   box-sizing: border-box;
   margin-top: 10rem;
   width: 100%;
-  height: calc(100vh - 18rem);
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3rem;
+  overflow: auto;
+  margin-bottom: 5rem;
 }
 
 @media (max-width: 900px) {
