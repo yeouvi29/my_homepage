@@ -52,7 +52,7 @@ const Header = (props) => {
             isChecked && classes["action--toggle"]
           }`}
         >
-          <Link to="/about" className={classes.link} onClick={handleClick}>
+          <Link to="/" className={classes.link} onClick={handleClick}>
             About
           </Link>
           <Link to="/project" className={classes.link} onClick={handleClick}>
