@@ -17,7 +17,7 @@
   width: 25rem;
   height: 25rem;
   position: absolute;
-  top: 1rem;
+  top: 0;
   right: 7rem;
   border-bottom-left-radius: 100%;
   align-items: center;
@@ -103,13 +103,8 @@
   /* transform: rotate(135deg); */
 }
 
-.container--menu:hover~.menu-lists,
-.menu-lists:hover {
+.container--menu:hover~.menu-lists {
   transform: rotate(0);
-}
-
-.menu-lists:active {
-  transform: rotate(90deg);
 }
 
 .menu-bar {
