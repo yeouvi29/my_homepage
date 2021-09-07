@@ -1,8 +1,19 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import classes from "./Header.module.css";
 
 const Header = (props) => {
+  const [isChecked, setIsChecked] = useState(false);
+  const handleChange = (e) => {
+    const { checked } = e.target;
+    setIsChecked(checked);
+  };
+
+  const handleClick = () => {
+    setIsChecked(false);
+  };
+
   return (
     <header className={classes.header}>
       <h1 className={classes.logo}>
@@ -11,22 +22,40 @@ const Header = (props) => {
         </Link>
       </h1>
       <nav className={classes.nav}>
-        <div className={classes["container--menu"]}>
-          <div
-            className={`${classes["menu-bar"]} ${classes["menu-bar-top"]}`}
-          ></div>
-          <div
-            className={`${classes["menu-bar"]} ${classes["menu-bar-middle"]}`}
-          ></div>
-          <div
-            className={`${classes["menu-bar"]} ${classes["menu-bar-bottom"]}`}
-          ></div>
-        </div>
-        <div className={classes["menu-lists"]}>
-          <Link to="/about" className={classes.link}>
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          checked={isChecked}
+          onChange={handleChange}
+          className={classes["nav--toggle"]}
+        />
+        <label htmlFor="nav-toggle" className={classes["container--menu"]}>
+          <span
+            className={`${classes["menu-bar"]} ${classes["menu-bar-top"]} ${
+              isChecked && classes["action-top"]
+            }`}
+          ></span>
+          <span
+            className={`${classes["menu-bar"]} ${classes["menu-bar-middle"]} ${
+              isChecked && classes["action-middle"]
+            }`}
+          ></span>
+          <span
+            className={`${classes["menu-bar"]} ${classes["menu-bar-bottom"]} ${
+              isChecked && classes["action-bottom"]
+            }`}
+          ></span>
+        </label>
+
+        <div
+          className={`${classes["menu-lists"]} ${
+            isChecked && classes["action--toggle"]
+          }`}
+        >
+          <Link to="/about" className={classes.link} onClick={handleClick}>
             About
           </Link>
-          <Link to="/project" className={classes.link}>
+          <Link to="/project" className={classes.link} onClick={handleClick}>
             Project
           </Link>
         </div>

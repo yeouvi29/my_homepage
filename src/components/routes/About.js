@@ -47,7 +47,7 @@ const About = () => {
             <p>
               <span>Hi,</span> my name is
             </p>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </div>
           <h1 className={classes.name}>Emily Kang,</h1>
           <h1>a web developer</h1>
@@ -62,9 +62,9 @@ const About = () => {
           </p>
           <p className={classes.together}>
             and cats!
-            <div className={classes["container--image"]}>
+            <span className={classes["container--image"]}>
               <img className={classes.image} src={paws} alt="cat-paws" />
-            </div>
+            </span>
           </p>
         </div>
         <div className={`${classes["container--text"]} ${classes["skills"]}`}>
