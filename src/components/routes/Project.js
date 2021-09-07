@@ -21,7 +21,6 @@ const Project = () => {
   const [name, setName] = useState("");
   const [languages, setLanguaes] = useState("");
   const [prjDetail, setprjDetail] = useState("");
-  const [isMouseEntered, setIsMouseEntered] = useState(false);
   const handleClick = (e) => {
     const el = e.target.id;
     if (!el) return;
@@ -33,7 +32,6 @@ const Project = () => {
   };
 
   const handleMouseEnter = (e) => {
-    setIsMouseEntered(true);
     const el = e.target.id;
     if (!el) return;
     info.forEach((prj) => {
@@ -43,9 +41,6 @@ const Project = () => {
         setprjDetail(prj.detail);
       }
     });
-  };
-  const handleMouseOut = (e) => {
-    // setIsMouseEntered(false);
   };
   const imageEls = imgs.map((img, i) => {
     const text = img
@@ -60,7 +55,6 @@ const Project = () => {
         className={classes["image-box"]}
         onClick={handleClick}
         onMouseEnter={handleMouseEnter}
-        onMouseOut={handleMouseOut}
         style={{
           backgroundImage: `url(${img})`,
         }}
