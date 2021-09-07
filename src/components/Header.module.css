@@ -108,8 +108,8 @@
   transform: rotate(0);
 }
 
-.menu-lists:active,
-.menu-lists:focus {
+.menu-lists:hover,
+.menu-lists:active {
   transform: rotate(90deg);
 }
 
