@@ -72,7 +72,7 @@ const Project = () => {
   });
 
   return (
-    <Card>
+    <Card styles={classes["card-style"]}>
       <ul className={classes["project-lists"]} onClick={handleClick}>
         {imageEls}
       </ul>

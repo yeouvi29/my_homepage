@@ -187,3 +187,17 @@
   /* border: 2px dashed #000; */
   color: #fff;
 }
+
+@media (max-width: 800px) {
+  .header {
+    padding: 0;
+  }
+
+  .nav {
+    right: 3rem;
+  }
+
+  .logo {
+    left: 6rem;
+  }
+}

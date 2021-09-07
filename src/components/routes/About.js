@@ -15,6 +15,8 @@ const creative = [
   " ",
   "d",
   "e",
+  "v",
+  "e",
   "l",
   "o",
   "p",

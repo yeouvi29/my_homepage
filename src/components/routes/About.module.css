@@ -124,7 +124,6 @@
 
 .front:hover~.back {
   left: 49%;
-
 }
 
 /* .back {
@@ -174,4 +173,66 @@
 h3 span {
   font-size: 1.5rem;
   color: #fff;
+}
+
+@media (max-width: 900px) {
+  /* .home {
+    height: max-content;
+  } */
+
+  .container--wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container--text {
+    position: relative;
+    width: 100%;
+    min-height: 50rem;
+    margin-bottom: 5rem;
+  }
+
+  .my-name i {
+    display: none;
+  }
+
+  .skills {
+    padding-left: 3rem;
+    left: 0;
+  }
+
+  .back {
+    /* top: 0; */
+    transform: translateY(0);
+  }
+
+  .front:hover~.back {
+    left: 0;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .front {
+    height: 30rem;
+  }
+
+  .front h1 {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 3.5rem;
+  }
+
+  .front h3 span {
+    display: block;
+  }
+
+  .build strong {
+    display: block;
+  }
+
 }
