@@ -103,8 +103,14 @@
   /* transform: rotate(135deg); */
 }
 
-.container--menu:hover~.menu-lists {
+.container--menu:hover~.menu-lists,
+.menu-lists:hover {
   transform: rotate(0);
+}
+
+.menu-lists:active,
+.menu-lists:focus {
+  transform: rotate(90deg);
 }
 
 .menu-bar {
