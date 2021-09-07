@@ -108,6 +108,10 @@
   transform: rotate(0);
 }
 
+.menu-lists:active {
+  transform: rotate(90deg);
+}
+
 .menu-bar {
   width: 2.5rem;
   height: .3rem;

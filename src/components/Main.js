@@ -9,6 +9,9 @@ const Main = (props) => {
   return (
     <div className={classes.main}>
       <Switch>
+        <Route exact path="/">
+          <About />
+        </Route>
         <Route path="/about">
           <About />
         </Route>
