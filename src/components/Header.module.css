@@ -108,8 +108,7 @@
   transform: rotate(0);
 }
 
-.menu-lists:hover,
-.menu-lists:active {
+.menu-lists:focus {
   transform: rotate(90deg);
 }
 
@@ -188,12 +187,19 @@
   bottom: 4rem
 }
 
-.link:hover {
+.link:hover,
+.link:active {
   /* border: 2px dashed #000; */
   color: #fff;
 }
 
 @media (max-width: 800px) {
+
+  .menu-lists:focus,
+  .menu-lists:active {
+    transform: rotate(90deg);
+  }
+
   .header {
     padding: 0;
   }

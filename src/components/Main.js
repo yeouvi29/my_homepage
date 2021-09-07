@@ -15,9 +15,6 @@ const Main = (props) => {
         <Route path="/about">
           <About />
         </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
         <Route exact path="/project">
           <Project />
         </Route>
