@@ -1,15 +1,24 @@
 .detail-lists {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
+  justify-content: center;
   list-style: none;
 }
 
 .detail-list {
-  font-family: 'Lora', serif;
-  font-size: 2rem;
-  margin-top: .5rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.7rem;
+  margin-top: .1rem;
   margin-left: 1rem;
+}
+
+.detail-list strong {
+  color: #57bc90;
+}
+
+.detail-list:first-child {
+  margin-top: 0;
 }

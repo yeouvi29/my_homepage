@@ -41,16 +41,16 @@ const About = () => {
     <div className={mainClass}>
       <div className={classes["container--wrapper"]}>
         <div className={`${classes["container--text"]} ${classes.front}`}>
-          <p className={classes["my-name"]}>
-            Hi, my name is
-            <span>
-              <i class="fas fa-chevron-right"></i>
-            </span>
-          </p>
-          <h1>Emily Kang,</h1>
+          <div className={classes["my-name"]}>
+            <p>
+              <span>Hi,</span> my name is
+            </p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <h1 className={classes.name}>Emily Kang,</h1>
           <h1>a web developer</h1>
           <h3>
-            Front End <span>and a little bit of back end</span>
+            Front End <span>and a little bit of back end ;)</span>
           </h3>
         </div>
         <div className={`${classes["container--text"]} ${classes.back}`}>
@@ -63,6 +63,17 @@ const About = () => {
             <div className={classes["container--image"]}>
               <img className={classes.image} src={paws} alt="cat-paws" />
             </div>
+          </p>
+        </div>
+        <div className={`${classes["container--text"]} ${classes["skills"]}`}>
+          <h3>Skills</h3>
+          <h4>Programming Languages</h4>
+          <p>JavaScript(ES6), HTML, CSS/Sass</p>
+          <h4>Libraries & Frameworks</h4>
+          <p>React, Redux, Node.js, Express</p>
+          <h4>Tools & Platforms</h4>
+          <p>
+            Git, Webpack, Parcel, Netlify, Heroku, Firebase, MongoDB, Postman
           </p>
         </div>
       </div>

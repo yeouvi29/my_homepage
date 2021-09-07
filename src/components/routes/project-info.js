@@ -41,7 +41,7 @@ const info = [
     name: "DAD JOKE GENERATOR",
     website: "https://compassionate-minsky-d2f3d1.netlify.app/",
     language: "HTML, CSS, JavaScript, React",
-    detail: "Get jokes by using API and show jokes",
+    detail: "Get jokes by using API and show them",
   },
 ];
 
