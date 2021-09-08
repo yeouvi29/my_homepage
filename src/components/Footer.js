@@ -14,6 +14,9 @@ const Footer = (props) => {
         case "twitter":
           window.open("https://www.twitter.com/yeouvi29/");
           break;
+        case "codewars":
+          window.open("https://www.codewars.com/users/DLama");
+          break;
         default:
           console.log("");
       }
@@ -40,6 +43,14 @@ const Footer = (props) => {
           </li>
         </ul>
         <div className={classes["line-long"]}></div>
+      </div>
+      <div onClick={handleClick} className={classes["container--badge"]}>
+        <img
+          className={`icon ${classes["codewars"]}`}
+          id="codewars"
+          src="https://www.codewars.com/users/DLama/badges/large"
+          alt="codewars-badge"
+        />
       </div>
       <p className={classes.copyright}>
         Copyright <span>&copy;</span> 2021 Emily Kang

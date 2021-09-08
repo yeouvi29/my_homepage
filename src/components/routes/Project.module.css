@@ -67,6 +67,7 @@ a {
 .container--detail {
   width: 100%;
   height: 10rem;
+  box-sizing: border-box;
   background-color: #015249;
   border-radius: 10px;
   padding-left: 1rem;
