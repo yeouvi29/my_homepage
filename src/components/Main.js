@@ -2,6 +2,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 
 import About from "./routes/About";
 import Project from "./routes/Project";
+import NotFound from "./routes/NotFound";
 
 import classes from "./Main.module.css";
 
@@ -18,9 +19,9 @@ const Main = (props) => {
         <Route exact path="/project">
           <Project />
         </Route>
-        {/* <Route exact path="/contact">
-          <Contact />
-        </Route> */}
+        <Route path="*">
+          <NotFound />
+        </Route>
       </Switch>
     </div>
   );
