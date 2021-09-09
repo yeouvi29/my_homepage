@@ -14,7 +14,7 @@ const Trial = () => {
 
   return (
     <Card styles={classes["card-style"]}>
-      <h1>This is an experimental page</h1>
+      <h1 className={classes.title}>This is an experimental page</h1>
       <p>
         visitors: <span>{visitorNums}</span>
       </p>
