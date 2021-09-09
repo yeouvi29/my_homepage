@@ -1,14 +1,20 @@
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import Card from "./../../UI/Card";
+import classes from "./NotFound.module.css";
 
 const NotFound = () => {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push("/");
+  };
   return (
     <Card>
       <h1>Page Not Found.</h1>
-      <Link to="/">
-        <h3>Go back to home</h3>
-      </Link>
+      <button className={classes["btn--not-found"]} onClick={handleClick}>
+        Go home
+      </button>
     </Card>
   );
 };
