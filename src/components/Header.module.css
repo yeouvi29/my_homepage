@@ -45,6 +45,7 @@
   right: 0;
   border-bottom-left-radius: 100%;
   z-index: 10;
+  transition: all .2s ease-in;
 }
 
 
@@ -99,6 +100,11 @@
 
 .link-logo {
   text-decoration: none;
+}
+
+.logo:hover,
+.logo:active {
+  animation: smallBig .3s cubic-bezier(.74, 0, .62, 1.19) 1 forwards none;
 }
 
 .action-top {
@@ -163,6 +169,17 @@
 .link:active {
   color: #a5a5af;
 }
+
+@media (max-width: 1024px) {
+  .container--menu:hover .menu-bar-top {
+    top: calc(40% + 1rem);
+  }
+
+  .container--menu:hover .menu-bar-bottom {
+    top: calc(40% - 1rem);
+  }
+}
+
 
 @media (max-width: 800px) {
   .nav {
