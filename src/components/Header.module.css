@@ -47,6 +47,8 @@
   z-index: 10;
 }
 
+
+
 .menu-bar {
   width: 2.5rem;
   height: .3rem;
@@ -70,6 +72,35 @@
   transition: all .1s ease-in;
 }
 
+
+
+.container--menu:hover .menu-bar-top {
+  top: calc(40% + .8rem);
+}
+
+.container--menu:hover .menu-bar-bottom {
+  top: calc(40% - .8rem);
+}
+
+.nav--toggle:checked+.container--menu:hover .menu-bar-top {
+  top: 40%;
+}
+
+.nav--toggle:checked+.container--menu:hover .menu-bar-bottom {
+  top: 40%;
+}
+
+.logo {
+  position: absolute;
+  left: 9rem;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.link-logo {
+  text-decoration: none;
+}
+
 .action-top {
   top: 40%;
   transform: rotate(45deg);
@@ -82,17 +113,6 @@
 .action-bottom {
   top: 40%;
   transform: rotate(135deg);
-}
-
-.logo {
-  position: absolute;
-  left: 9rem;
-  cursor: pointer;
-  font-size: 3rem;
-}
-
-.link-logo {
-  text-decoration: none;
 }
 
 .menu-lists {

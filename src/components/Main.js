@@ -1,4 +1,4 @@
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import About from "./routes/About";
 import Project from "./routes/Project";
@@ -10,7 +10,7 @@ const Main = (props) => {
     <div className={classes.main}>
       <Switch>
         <Route exact path="/">
-          <About />
+          <Redirect to="about" />
         </Route>
         <Route path="/about">
           <About />
