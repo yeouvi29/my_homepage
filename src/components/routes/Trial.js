@@ -18,7 +18,6 @@ const Trial = () => {
       <p>
         visitors: <span>{visitorNums}</span>
       </p>
-      <button></button>
     </Card>
   );
 };
