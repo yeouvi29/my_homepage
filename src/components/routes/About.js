@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import randomColor from "randomcolor";
-// import { useInterval } from "rooks";
 import paws from "./../../images/paws.jpg";
 import classes from "./About.module.css";
 const creative = [

@@ -58,11 +58,10 @@ const Header = (props) => {
           <Link to="/project" className={classes.link} onClick={handleClick}>
             Project
           </Link>
+          <Link to="/trial" className={classes.link} onClick={handleClick}>
+            Trial
+          </Link>
         </div>
-
-        {/* <Link to="/contact" className={classes.link}>
-          Contact
-        </Link> */}
       </nav>
     </header>
   );

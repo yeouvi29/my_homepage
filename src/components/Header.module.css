@@ -147,7 +147,7 @@
   color: #000;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: 1.7rem;
   text-decoration: none;
   padding: .8rem 1rem;
@@ -161,8 +161,12 @@
   bottom: 9rem
 }
 
-.link:last-child {
-  bottom: 4rem
+.link:nth-child(2) {
+  bottom: 5rem
+}
+
+.link:nth-child(3) {
+  bottom: 1rem
 }
 
 .link:hover,
@@ -216,8 +220,12 @@
     top: 10rem;
   }
 
-  .link:last-child {
+  .link:nth-child(2) {
     top: 15rem;
+  }
+
+  .link:nth-child(3) {
+    top: 20rem;
   }
 
   .action--toggle {
