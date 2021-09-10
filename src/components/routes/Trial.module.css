@@ -6,9 +6,17 @@
 .container--game {
   width: 30rem;
   height: 20rem;
-  background-color: #57bc90;
-  border: 1px solid #015249;
+  background: url("./../../images/toto/grass.png"), repeat, center;
+  border: 2px solid #015249;
+  border-radius: 10px;
+  margin-top: 4rem;
   position: relative;
+}
+
+.house {
+  position: absolute;
+  top: -6rem;
+  left: -1rem;
 }
 
 .btn--game-start {
