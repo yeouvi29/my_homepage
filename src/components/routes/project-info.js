@@ -9,7 +9,7 @@ const info = [
   {
     id: "project-1",
     name: "TIP CALCULATOR",
-    website: "https://pedantic-noyce-80e2e0.netlify.app/",
+    website: "https://tipcalculator-emily.netlify.app/",
     language: "HTML, CSS, JavaScript",
     detail: "Made calulator that can calculte a tip",
   },
