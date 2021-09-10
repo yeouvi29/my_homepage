@@ -9,7 +9,7 @@ const info = [
   {
     id: "project-1",
     name: "TIP CALCULATOR",
-    website: "https://scrimba.com/scrim/co77c46f284c8641da4012f8d",
+    website: "https://pedantic-noyce-80e2e0.netlify.app/",
     language: "HTML, CSS, JavaScript",
     detail: "Made calulator that can calculte a tip",
   },
@@ -23,8 +23,8 @@ const info = [
   {
     id: "project-3",
     name: "TEXT BEAUTIFIER",
-    website: "https://scrimba.com/scrim/cZ3QeRc6",
-    language: "HTML, CSS, JavaScript, React",
+    website: "https://tender-austin-1b8306.netlify.app/",
+    language: "HTML, SCSS, JavaScript, React",
     detail:
       "Made a text beautifier that can decorate text with several properties",
   },
