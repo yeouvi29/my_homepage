@@ -38,6 +38,8 @@ const Trial = () => {
       <p>
         visitors: <span>{visitorNums}</span>
       </p>
+      <h3>Toto's walk</h3>
+      <p>Press the start button and walk Toto by using arrow keys.😄</p>
       <button
         className={classes["btn--game-start"]}
         onClick={clickHandler}
