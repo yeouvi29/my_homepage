@@ -7,7 +7,6 @@ export const fetchCountData = () => {
         "https://api.countapi.xyz/hit/heuristic-ardinghelli-129546.netlify.app/visits?key"
       );
       const data = await response.json();
-      console.log(data.value);
 
       return data;
     };
