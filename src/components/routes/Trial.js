@@ -14,6 +14,7 @@ const Trial = () => {
   const top = useSelector((state) => state.move.top);
   const left = useSelector((state) => state.move.left);
   const start = useSelector((state) => state.move.start);
+  const direction = useSelector((state) => state.move.direction);
 
   const clickHandler = () => {
     dispatch(gameActions.start());
@@ -48,7 +49,7 @@ const Trial = () => {
         {start ? "STOP" : "START"}
       </button>
       <div className={classes["container--game"]}>
-        <Toto top={top} left={left} />
+        <Toto top={top} left={left} direction={direction} />
       </div>
     </Card>
   );
