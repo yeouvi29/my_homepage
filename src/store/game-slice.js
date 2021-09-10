@@ -32,6 +32,11 @@ const gameSlice = createSlice({
     start(state, action) {
       state.start = !state.start;
     },
+    reset(state, action) {
+      state.top = 18;
+      state.left = 12;
+      state.direction = "f";
+    },
   },
 });
 export const gameActions = gameSlice.actions;

@@ -19,6 +19,7 @@ const Trial = () => {
 
   const clickHandler = () => {
     dispatch(gameActions.start());
+    if (!start) dispatch(gameActions.reset());
   };
 
   const keyDownHandler = useCallback(
