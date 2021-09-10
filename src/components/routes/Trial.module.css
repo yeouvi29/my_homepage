@@ -1,7 +1,45 @@
 .card-style {
-  width: 100%;
-  min-height: 50rem;
+  width: 100vw;
+  height: 100%;
 }
+
+.container--game {
+  width: 30rem;
+  height: 20rem;
+  background-color: #57bc90;
+  border: 1px solid #015249;
+  position: relative;
+}
+
+.btn--game-start {
+  width: 10rem;
+  background-color: #015249;
+  color: yellow;
+  border: 2px solid #a5a5af;
+  border-radius: 3px;
+  padding: 2px;
+  margin-bottom: 1rem;
+  box-shadow: .1rem .3rem 0 #a5a5af;
+}
+
+.btn--game-start:hover,
+.btn--game-start:active {
+  background-color: #57bc90;
+
+}
+
+.btn--game-start:active {
+  transform: translateY(.2rem);
+  box-shadow: .1rem .1rem 0 #8d8d96;
+}
+
+.label--toto {
+  width: 30rem;
+  height: 20rem;
+  border: 1px solid black;
+  position: absolute;
+}
+
 
 @media (max-width: 800px) {
   .title {
