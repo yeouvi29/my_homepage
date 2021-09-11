@@ -1,47 +1,45 @@
-import { useState, useEffect } from "react";
+import { useEffect, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useInterval } from "rooks";
+import RandomTextColor from "./RandomTextColor";
 import randomColor from "randomcolor";
+import { colorAction } from "../../store/color-slice";
 import paws from "./../../images/paws.jpg";
 import classes from "./About.module.css";
-const creative = [
-  "c",
-  "r",
-  "e",
-  "a",
-  "t",
-  "i",
-  "v",
-  "e",
-  " ",
-  "d",
-  "e",
-  "v",
-  "e",
-  "l",
-  "o",
-  "p",
-  "e",
-  "r",
-];
+
 const About = () => {
-  const [colorfulElements, setColorfulElements] = useState([]);
+  const dispatch = useDispatch();
+  const creative = useSelector((state) => state.color.creative);
+  const color = useSelector((state) => state.color.color);
+
+  const textLength = creative.length;
   const mainClass = `${classes.home}  ${classes["container--main"]}`;
 
+  const { start, stop } = useInterval(() => {
+    const random = randomColor();
+    dispatch(colorAction.changeColor(random));
+  }, 500);
+
+  const handleMouseEnter = () => start();
+
+  const handleMouseLeave = () => stop();
+
   useEffect(() => {
-    const colors = creative.map((letter, i) => (
-      <span
-        key={letter + i}
-        className={classes["color-letter"]}
-        style={{ color: randomColor() }}
-      >
-        {letter}
-      </span>
-    ));
-    setColorfulElements(colors);
-  }, []);
+    let count = 0;
+    while (count < textLength - 1) {
+      dispatch(colorAction.changeColor(randomColor()));
+      count++;
+    }
+  }, [textLength, dispatch]);
+
   return (
     <div className={mainClass}>
       <div className={classes["container--wrapper"]}>
-        <div className={`${classes["container--text"]} ${classes.front}`}>
+        <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={`${classes["container--text"]} ${classes.front}`}
+        >
           <div className={classes["my-name"]}>
             <p>
               <span>Hi,</span> my name is
@@ -55,7 +53,15 @@ const About = () => {
           </h3>
         </div>
         <div className={`${classes["container--text"]} ${classes.back}`}>
-          <p>{colorfulElements}</p>
+          <p>
+            {creative.map((letter, i) => (
+              <RandomTextColor
+                letter={letter}
+                key={letter + i}
+                color={color[color.length - 1 - i]}
+              />
+            ))}
+          </p>
           <p className={classes.build}>
             who loves <strong>building web</strong>
           </p>
