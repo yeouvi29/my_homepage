@@ -1,6 +1,5 @@
-import { useEffect, useCallback } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useInterval } from "rooks";
 import RandomTextColor from "./RandomTextColor";
 import randomColor from "randomcolor";
 import { colorAction } from "../../store/color-slice";
