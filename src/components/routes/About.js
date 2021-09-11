@@ -15,14 +15,10 @@ const About = () => {
   const textLength = creative.length;
   const mainClass = `${classes.home}  ${classes["container--main"]}`;
 
-  const { start, stop } = useInterval(() => {
-    const random = randomColor();
-    dispatch(colorAction.changeColor(random));
-  }, 500);
-
-  const handleMouseEnter = () => start();
-
-  const handleMouseLeave = () => stop();
+  // const { start, stop } = useInterval(() => {
+  //   const random = randomColor();
+  //   dispatch(colorAction.changeColor(random));
+  // }, 500);
 
   useEffect(() => {
     let count = 0;
@@ -30,16 +26,19 @@ const About = () => {
       dispatch(colorAction.changeColor(randomColor()));
       count++;
     }
+    const colorChange = setInterval(() => {
+      const random = randomColor();
+      dispatch(colorAction.changeColor(random));
+    }, 500);
+    return () => {
+      clearInterval(colorChange);
+    };
   }, [textLength, dispatch]);
 
   return (
     <div className={mainClass}>
       <div className={classes["container--wrapper"]}>
-        <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className={`${classes["container--text"]} ${classes.front}`}
-        >
+        <div className={`${classes["container--text"]} ${classes.front}`}>
           <div className={classes["my-name"]}>
             <p>
               <span>Hi,</span> my name is
