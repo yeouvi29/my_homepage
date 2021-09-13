@@ -45,7 +45,7 @@ const Trial = () => {
 
   return (
     <Card styles={classes["card-style"]}>
-      <h1 className={classes.title}>This is an experimental page</h1>
+      {/* <h1 className={classes.title}>This is an experimental page</h1> */}
       <h3>Toto's walk</h3>
       <p>Press the start button and walk Toto by using arrow keys.😄</p>
       <button className={classes["btn--game-start"]} onClick={clickHandler}>
