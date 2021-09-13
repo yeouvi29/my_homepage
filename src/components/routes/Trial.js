@@ -5,6 +5,8 @@ import { gameActions } from "./../../store/game-slice";
 import house from "./../../images/toto/house.png";
 import windmill from "./../../images/toto/windmill.png";
 import mealBag from "./../../images/toto/meal-bag.png";
+import treeOne from "./../../images/toto/tree_1.png";
+import treeTwo from "./../../images/toto/tree_2.png";
 import Toto from "./Toto";
 import Card from "./../../UI/Card";
 
@@ -62,6 +64,8 @@ const Trial = () => {
           src={mealBag}
           alt="meal-bag"
         />
+        <img className={classes["tree-one"]} src={treeOne} alt="orange tree" />
+        <img className={classes["tree-two"]} src={treeTwo} alt="tree" />
         {start && <Toto top={top} left={left} direction={direction} />}
         <p className={classes.pixel}>Pixel art by Emily K.</p>
       </div>
