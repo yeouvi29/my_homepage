@@ -19,7 +19,7 @@ const Main = (props) => {
         <Route exact path="/project">
           <Project />
         </Route>
-        <Route exact path="/trial">
+        <Route exact path="/toto">
           <Trial />
         </Route>
         <Route path="*">

@@ -41,12 +41,15 @@
 .btn--game-start {
   width: 10rem;
   background-color: #015249;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  padding: 1rem 0;
   cursor: pointer;
   color: yellow;
-  border: 2px solid #a5a5af;
+  border: 2px solid #015249;
   border-radius: 3px;
-  padding: 2px;
   margin-bottom: 10rem;
+  margin-top: 1rem;
   box-shadow: .1rem .3rem 0 #a5a5af;
 }
 
@@ -100,9 +103,10 @@
 }
 
 .pixel {
-  font-size: 1.8rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.1rem;
   position: absolute;
-  bottom: -15%;
+  bottom: -10%;
   right: .3rem;
 }
 
@@ -115,7 +119,7 @@
 
 .tree-two {
   position: absolute;
-  top: -9.5rem;
+  top: -6.5rem;
   left: 10rem;
   z-index: -1;
 }
