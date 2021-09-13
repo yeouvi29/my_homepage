@@ -62,6 +62,13 @@
   filter: saturate(2);
 }
 
+.visitors {
+  position: absolute;
+  color: #015249;
+  bottom: 1rem;
+  right: 2rem;
+}
+
 ul li {
   cursor: pointer;
 }
@@ -78,4 +85,12 @@ ul li i:hover {
   .footer {
     position: relative;
   }
+
+  .visitors {
+    position: absolute;
+    color: #015249;
+    top: -3rem;
+    right: 2rem;
+  }
+
 }

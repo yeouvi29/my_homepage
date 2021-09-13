@@ -8,9 +8,25 @@
   height: 20rem;
   background: url("./../../images/toto/grass.png"), repeat, center;
   border: 2px solid #015249;
-  border-radius: 10px;
+  border-top: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   margin-top: 4rem;
+  margin-bottom: 2rem;
   position: relative;
+}
+
+.game-sky {
+  position: absolute;
+  width: 30rem;
+  height: 13rem;
+  background-color: skyblue;
+  border: 2px solid navy;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  top: -60%;
+  left: -2px;
+  z-index: -1;
 }
 
 .house {
@@ -27,7 +43,7 @@
   border: 2px solid #a5a5af;
   border-radius: 3px;
   padding: 2px;
-  margin-bottom: 1rem;
+  margin-bottom: 10rem;
   box-shadow: .1rem .3rem 0 #a5a5af;
 }
 
@@ -49,6 +65,42 @@
   position: absolute;
 }
 
+.windmill {
+  position: absolute;
+  top: -9.5rem;
+  right: 1rem;
+}
+
+.meal-bag-one {
+  width: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.meal-bag-two {
+  width: 2rem;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  z-index: 10;
+}
+
+.meal-bag-three {
+  width: 2rem;
+  position: absolute;
+  top: -1rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+.pixel {
+  font-size: 1.8rem;
+  position: absolute;
+  bottom: -15%;
+  right: .3rem;
+}
 
 @media (max-width: 800px) {
   .title {

@@ -1,6 +1,11 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCountData } from "../../store/count-action";
 import classes from "./Footer.module.css";
 
 const Footer = (props) => {
+  const dispatch = useDispatch();
+  const visitorNums = useSelector((state) => state.count.count);
   const handleClick = (e) => {
     const id = e.target.closest(".icon").id;
     if (id) {
@@ -22,6 +27,10 @@ const Footer = (props) => {
       }
     }
   };
+
+  useEffect(() => {
+    dispatch(fetchCountData());
+  }, [dispatch]);
   return (
     <footer className={classes.footer}>
       <div className={classes["container--icon"]}>
@@ -54,6 +63,9 @@ const Footer = (props) => {
       </div>
       <p className={classes.copyright}>
         Copyright <span>&copy;</span> 2021 Emily Kang
+      </p>
+      <p className={classes.visitors}>
+        visitors: <span>{visitorNums}</span>
       </p>
     </footer>
   );
