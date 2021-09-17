@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { projectActions } from "./../../store/project-slice";
@@ -50,7 +51,7 @@ const Project = () => {
       .match(/(?!.+\/)(\w+-\w+)+(?=\.\w+)/g)[0]
       .replace(/-/g, " ")
       .toUpperCase();
-    console.log("rendering");
+
     return (
       <ProjectList
         id={info[i].id}
@@ -82,4 +83,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default memo(Project);
