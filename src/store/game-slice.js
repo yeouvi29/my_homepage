@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initalGameState = {
+const initialGameState = {
   top: 18,
   left: 12,
   start: false,
@@ -9,7 +9,7 @@ const initalGameState = {
 
 const gameSlice = createSlice({
   name: "game",
-  initialState: initalGameState,
+  initialState: initialGameState,
   reducers: {
     up(state, action) {
       if (state.top > 21 || (state.top > 5 && state.left >= 72))

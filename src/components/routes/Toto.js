@@ -5,7 +5,6 @@ import totoRight from "./../../images/toto/toto-right.gif";
 import classes from "./Toto.module.css";
 
 const Toto = (props) => {
-  console.log(props.top, props.left);
   return (
     <img
       className={classes.toto}

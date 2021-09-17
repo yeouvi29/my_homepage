@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { projectActions } from "./../../store/project-slice";
 import ProjectDetail from "./ProjectDetail";
+import ProjectList from "./ProjectList";
 import info from "./project-info";
 import Card from "../../UI/Card";
 import travelApp from "./../../images/travel-app.png";
@@ -9,6 +12,7 @@ import textBeautifier from "./../../images/text-beautifier.png";
 import catGallery from "./../../images/cat-gallery-responsive.png";
 import dadJoke from "./../../images/dad-joke-generator.png";
 import classes from "./Project.module.css";
+
 const imgs = [
   travelApp,
   tipCalculator,
@@ -18,10 +22,12 @@ const imgs = [
   dadJoke,
 ];
 const Project = () => {
-  const [name, setName] = useState("");
-  const [languages, setLanguaes] = useState("");
-  const [prjDetail, setprjDetail] = useState("");
-  const [isEntered, setIsEntered] = useState(false);
+  const dispatch = useDispatch();
+  const name = useSelector((state) => state.project.name);
+  const languages = useSelector((state) => state.project.languages);
+  const projectDetail = useSelector((state) => state.project.projectDetail);
+  const isEntered = useSelector((state) => state.project.isEntered);
+
   const handleClick = (e) => {
     const el = e.target.id;
     if (!el) return;
@@ -30,53 +36,45 @@ const Project = () => {
     });
   };
 
-  const handleMouseEnter = (e) => {
+  const handleMouseOver = (e) => {
     const el = e.target.id;
     if (!el) return;
-    setIsEntered(true);
+    dispatch(projectActions.changeEnteringState());
     info.forEach((prj) => {
-      if (prj.id === el) {
-        setName(prj.name);
-        setLanguaes(prj.language);
-        setprjDetail(prj.detail);
-      }
+      if (prj.id === el) dispatch(projectActions.displayInfo(prj));
     });
   };
+
   const imageEls = imgs.map((img, i) => {
     const text = img
       .match(/(?!.+\/)(\w+-\w+)+(?=\.\w+)/g)[0]
       .replace(/-/g, " ")
       .toUpperCase();
-
+    console.log("rendering");
     return (
-      <li
+      <ProjectList
         id={info[i].id}
         key={img + i}
         className={classes["image-box"]}
-        onClick={handleClick}
-        onMouseEnter={handleMouseEnter}
-        style={{
-          backgroundImage: `url(${img})`,
-        }}
-      >
-        <span>{text}</span>
-        {/* <i className={`fas fa-external-link-alt ${classes.external}`}></i> */}
-      </li>
+        handleClick={handleClick}
+        handleMouseOver={handleMouseOver}
+        imageBox={classes["image-box"]}
+        img={img}
+        text={text}
+      />
     );
   });
-  console.log(isEntered);
+
   return (
     <Card styles={classes["card-style"]}>
-      <ul className={classes["project-lists"]} onMouseEnter={handleMouseEnter}>
-        {imageEls}
-      </ul>
+      <ul className={classes["project-lists"]}>{imageEls}</ul>
       <div className={classes["container--detail"]}>
         {name && (
           <ProjectDetail
             isEntered={isEntered}
             name={name}
             languages={languages}
-            detail={prjDetail}
+            detail={projectDetail}
           />
         )}
       </div>

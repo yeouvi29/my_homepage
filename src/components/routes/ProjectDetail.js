@@ -1,3 +1,4 @@
+import { memo } from "react";
 import classes from "./ProjectDetail.module.css";
 
 const ProjectDetail = (props) => {
@@ -17,4 +18,4 @@ const ProjectDetail = (props) => {
   );
 };
 
-export default ProjectDetail;
+export default memo(ProjectDetail);
