@@ -5,6 +5,7 @@ const initialProjectState = {
   languages: "",
   projectDetail: "",
   isEntered: false,
+  isMounted: false,
 };
 
 const projectSlice = createSlice({
@@ -12,12 +13,15 @@ const projectSlice = createSlice({
   initialState: initialProjectState,
   reducers: {
     changeEnteringState(state) {
-      state.isEntered = true;
+      state.isEntered = !state.isEntered;
     },
     displayInfo(state, action) {
       state.name = action.payload.name;
       state.languages = action.payload.language;
       state.projectDetail = action.payload.detail;
+    },
+    setMount(state) {
+      state.isMounted = true;
     },
   },
 });

@@ -7,6 +7,7 @@ const ProjectList = (props) => {
       className={props.imageBox}
       onClick={props.handleClick}
       onMouseOver={props.handleMouseOver}
+      onMouseOut={props.handleMouseOut}
       style={{
         backgroundImage: `url(${props.img})`,
       }}
